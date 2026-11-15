@@ -1,6 +1,6 @@
 # FORMA COFFEE — Demo QR Menu
 
-Independent multilingual café menu demonstrator by GAME APPS. **This is a fictional café and all dishes/prices are illustrative.**
+Independent multilingual café menu demonstrator by RYBKA. **This is a fictional café and all dishes/prices are illustrative.**
 
 ## Tech
 
@@ -8,7 +8,7 @@ Independent multilingual café menu demonstrator by GAME APPS. **This is a ficti
 - Georgian / English / Russian language selection
 - Mobile-first Warm Editorial visual system
 - Four categories / 15 dishes / search / sidebar / detail dialog
-- Static site suitable for Cloudflare Pages
+- Static site suitable for GitHub Pages
 
 ## Run locally
 
@@ -26,7 +26,7 @@ npm run build
 npm test
 ```
 
-## Deploy to Cloudflare Pages
+## Deploy to GitHub Pages
 
 1. Connect this repository in Cloudflare Workers & Pages.
 2. Framework preset: **Vite**.
@@ -38,7 +38,7 @@ No authentication, API keys or database are needed.
 
 ## Current limitations
 
-- **v0.1.0 functional prototype:** dishes have stylized placeholders, not final food photography.
+- **v0.3.0 demonstration:** 15 generated food photographs, search by dish name only, multilingual descriptions and ingredients.
 - Prices, ingredients, translations and allergen markings are **demonstration data**, not verified information from a real establishment.
 - QR graphic, Cloudflare deployment and real-device Safari QA have **not** been completed.
 - Static menu is edited in `src/data.ts`; an owner admin is not included.
@@ -46,7 +46,7 @@ No authentication, API keys or database are needed.
 
 ## Ownership / reuse
 
-Prototype developed for GAME APPS; this repo is a self-contained demo. Reusable modules may be extracted into a separate internal Menu Kit after stabilization. No open-source license has been granted.
+Prototype developed for RYBKA; this repo is a self-contained demo. Reusable modules may be extracted into a separate internal Menu Kit after stabilization. No open-source license has been granted.
 
 More details: [docs/CHANGELOG.md](docs/CHANGELOG.md).
 
