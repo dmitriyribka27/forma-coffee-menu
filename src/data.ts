@@ -2,14 +2,14 @@ import type { MenuData, Dish, Language } from './types';
 const langs = ['ka', 'en', 'ru'] as const;
 const today = '2026-11-15T00:00:00+04:00';
 const translation = (ka: string, en: string, ru: string) => ({ ka, en, ru });
-const opts = (volumes: Array<[number, number]>) => volumes.map(([ml, gel], i) => ({
-  id: `size-${ml}`, label_translations: translation(`${ml} მლ`, `${ml} ml`, `${ml} мл`), price_minor: gel * 100,
+const opts = (dishId: string, volumes: Array<[number, number]>) => volumes.map(([ml, gel], i) => ({
+  id: `${dishId}-size-${ml}`, label_translations: translation(`${ml} მლ`, `${ml} ml`, `${ml} мл`), price_minor: gel * 100,
   quantity: ml, unit: 'ml' as const, sort_order: i + 1, is_default: i === 0, is_available: true
 }));
 function dish(id: string, category_id: string, name: [string, string, string], desc: [string, string, string], ingredients: [string, string, string], price: number | null, sizes: Array<[number,number]> = [], other: Partial<Dish> = {}): Dish {
   return {
     id, category_id, slug: id, translations: { name: translation(...name), description: translation(...desc), ingredients: translation(...ingredients) },
-    base_price_minor: price === null ? null : price * 100, price_options: opts(sizes), image_id: null, allergen_ids: [], is_published: true, is_visible: true,
+    base_price_minor: price === null ? null : price * 100, price_options: opts(id,sizes), image_id: null, allergen_ids: [], is_published: true, is_visible: true,
     availability: 'available', sort_order: 0, created_at: today, updated_at: today, ...other
   };
 }
@@ -30,7 +30,6 @@ const dishes = [
   dish('cheesecake','desserts',['ჩიზქეიქი','Cheesecake','Чизкейк'],['კრემოვანი ტექსტურა, ნაზი გემო.','Creamy and delicately sweet.','Нежный сливочный десерт.'],['კრემ-ყველი, კვერცხი, ორცხობილა','Cream cheese, eggs, biscuit','Сливочный сыр, яйца, печенье'],16,[],{allergen_ids:['milk','eggs','gluten']}),
   dish('brownie','desserts',['ბრაუნი','Brownie','Брауни'],['მუქი შოკოლადის ინტენსიური გემო.','Deep dark chocolate, soft center.','Насыщенный шоколадный вкус и мягкая серединка.'],['შოკოლადი, ფქვილი, კარაქი, კვერცხი','Chocolate, flour, butter, eggs','Шоколад, мука, масло, яйца'],14,[],{allergen_ids:['milk','eggs','gluten'],availability:'sold_out'})
 ];
-const order = ['coffee','cold','breakfast','desserts'];
 for (const [i, d] of dishes.entries()) d.sort_order = i;
 export const menu: MenuData = {
   settings: {
@@ -71,8 +70,13 @@ export function validateMenu(m: MenuData): string[] {
    if((d.base_price_minor===null)===(d.price_options.length===0)) errors.push(`${d.id}: exactly one price model required`);
    if(d.base_price_minor!==null && (!Number.isInteger(d.base_price_minor)||d.base_price_minor<0)) errors.push(`${d.id}: invalid base price`);
    if(d.price_options.some(o=>!Number.isInteger(o.price_minor)||o.price_minor<0)) errors.push(`${d.id}: invalid option price`);
+   if(new Set(d.price_options.map(o=>o.id)).size!==d.price_options.length)errors.push(`${d.id}: duplicate price option ID`);
    if(d.price_options.length && d.price_options.filter(o=>o.is_default).length!==1) errors.push(`${d.id}: expected one default option`);
-   for(const l of m.settings.supported_languages)if(!d.translations.name[l]?.trim())errors.push(`${d.id}: missing name ${l}`);
+   for(const l of m.settings.supported_languages){
+     if(!d.translations.name[l]?.trim())errors.push(`${d.id}: missing name ${l}`);
+     for(const field of ['description','ingredients'] as const)if(Object.values(d.translations[field]).some(x=>x?.trim())&&!d.translations[field][l]?.trim())errors.push(`${d.id}: missing ${field} ${l}`);
+     for(const o of d.price_options)if(!o.label_translations[l]?.trim())errors.push(`${d.id}: missing option label ${l}`);
+   }
    for(const id of d.allergen_ids)if(!m.allergens.some(a=>a.id===id))errors.push(`${d.id}: unknown allergen ${id}`);
  }
  return errors;
