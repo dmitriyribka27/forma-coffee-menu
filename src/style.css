@@ -242,3 +242,9 @@ html[lang="ka"] .venue-section h2,html[lang="ka"] .venue-map-preview strong{font
 .sidebar-order-link:focus-visible{outline:3px solid var(--roasted);outline-offset:3px}
 .sidebar-foot{display:flex;flex-direction:column;gap:6px}
 .sidebar-foot small{display:block}
+
+/* Compact legal footer: informational, not another venue card */
+.sidebar-about{padding-top:22px;margin-bottom:20px}
+.sidebar-legal-text{font-size:12px;line-height:1.65;color:var(--stone);overflow-wrap:anywhere}
+.sidebar-legal-text p{margin:0 0 4px;font-weight:400}
+.sidebar-legal-text p:last-child{margin-bottom:0}
