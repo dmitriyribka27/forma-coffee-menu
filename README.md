@@ -49,3 +49,7 @@ No authentication, API keys or database are needed.
 Prototype developed for GAME APPS; this repo is a self-contained demo. Reusable modules may be extracted into a separate internal Menu Kit after stabilization. No open-source license has been granted.
 
 More details: [docs/CHANGELOG.md](docs/CHANGELOG.md).
+
+## Demo photography
+
+The 15 food images under `public/images/` were generated for this fictional demo. They are illustrative and do not depict actual products sold by a real café.

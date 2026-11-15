@@ -31,3 +31,12 @@
 - Replace `src/data.ts` data and validate with `npm test` / `npm run build`.
 - Commit the updated source to GitHub; connected Pages will deploy the new static build.
 - Keep the Pages project URL stable so an existing QR code does not change.
+
+## v0.2.0 — Visual refresh (2026-11-15)
+- Preserved the greeting and shortened the introduction to bring dishes higher on mobile.
+- Added 15 locally hosted, AI-generated illustrative dish photos in WebP format (not photos of real café products).
+- Removed decorative filler text and mid-menu promotional panel.
+- Tightened menu cards and language gate spacing.
+- Improved category navigation offset beneath sticky header and tabs.
+- Preserved language switching, search, details, pricing and availability.
+- QA: TypeScript and 7 Node tests passed. Real iPhone/Safari verification still required.
