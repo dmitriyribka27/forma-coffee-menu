@@ -53,7 +53,7 @@ function dishCard(d:Dish,lang:Language){
  const unavailable=d.availability!=='available';
  return `<div class="dish-card ${unavailable?'dimmed':''}" ><button type="button" class="dish-card-main" data-dish="${d.id}" aria-label="${esc(d.translations.name[lang])}, ${esc(unavailable?t(d.availability==='sold_out'?'soldOut':'unavailable',lang):'')}">
  <span class="dish-thumb" aria-hidden="true">${photo(d)}</span>
- <span class="dish-copy"><span class="dish-title">${esc(d.translations.name[lang])}</span><span class="dish-description">${esc(d.translations.description[lang])}</span><span class="dish-bottom">${priceMarkup(d,lang)}${unavailable?`<span class="status-tag">${t(d.availability==='sold_out'?'soldOut':'unavailable',lang)}</span>`:''}</span></span><span class="dish-arrow" aria-hidden="true">↗</span></button>${unavailable?'':`<button type="button" class="dish-quick-add" data-quick-add="${d.id}" aria-label="${esc(t('addToCart',lang))}: ${esc(d.translations.name[lang])}">+</button>`}</div>`;
+ <span class="dish-copy"><span class="dish-title">${esc(d.translations.name[lang])}</span><span class="dish-description">${esc(d.translations.description[lang])}</span><span class="dish-bottom">${priceMarkup(d,lang)}${unavailable?`<span class="status-tag">${t(d.availability==='sold_out'?'soldOut':'unavailable',lang)}</span>`:''}</span></span></button>${unavailable?'':`<button type="button" class="dish-quick-add" data-quick-add="${d.id}" aria-label="${esc(t('addToCart',lang))}: ${esc(d.translations.name[lang])}">+</button>`}</div>`;
 }
 function sections(lang:Language){
  if(state.search.trim()){
