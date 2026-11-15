@@ -29,7 +29,7 @@ export const ui = {
   options: { ka: 'ზომა', en: 'Size', ru: 'Размер' },
   price: { ka: 'ფასი', en: 'Price', ru: 'Цена' },
   demo: { ka: 'დემო პროექტი · რეალური კაფე არ არის', en: 'Demo concept · Not a real café', ru: 'Демонстрация · Не настоящая кофейня' },
-  by: { ka: 'შექმნილია GAME APPS-ის მიერ', en: 'A GAME APPS concept', ru: 'Концепция GAME APPS' },
+  by: { ka: 'შექმნილია RYBKA-ის მიერ', en: 'A RYBKA concept', ru: 'Концепция RYBKA' },
   back: { ka: 'უკან მენიუში', en: 'Back to menu', ru: 'Назад к меню' },
   photoComing: { ka: 'ფოტო მალე დაემატება', en: 'Photo coming soon', ru: 'Фото скоро появится' },
   loadError: { ka: 'მენიუ ვერ ჩაიტვირთა', en: 'Could not load the menu', ru: 'Не удалось загрузить меню' },
