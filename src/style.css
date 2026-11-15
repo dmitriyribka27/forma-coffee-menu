@@ -254,3 +254,49 @@ html.touch-input button:focus-visible,
 html.touch-input a:focus-visible,
 html.touch-input [role="button"]:focus-visible {outline:none!important;box-shadow:none!important}
 html.touch-input input:focus-visible {outline:none}
+
+/* FORMA / PRINTED DIGITAL — editorial visual system */
+:root{--paper:#F4F0E7;--espresso:#243E72;--roasted:#C9473C;--oat:#E9E3D7;--stone:#59677D;--line:#D4CCBD}
+body{background:var(--paper);color:var(--espresso)}
+.site-header{background:var(--paper);border-bottom:2px solid var(--espresso)}
+.brand-mark{font-weight:800;letter-spacing:-.075em;color:var(--espresso)}
+.brand-mark span{letter-spacing:.14em;font-weight:600}
+.tab-rail{background:var(--paper);border-bottom:1px solid var(--espresso)}
+.category-tab{font-weight:700;text-transform:uppercase;letter-spacing:.035em}
+.category-tab.active{color:var(--roasted);border-bottom-color:var(--roasted)}
+.print-hero{background:var(--espresso);color:var(--paper);margin:18px -20px 28px;padding:20px 21px 0;min-height:340px;position:relative;overflow:hidden}
+.print-hero-top,.print-hero-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:10px;font-weight:700;letter-spacing:.09em}
+.print-hero-top{padding-bottom:13px;border-bottom:1px solid #ffffff66}
+.print-hero-grid{display:flex;align-items:center;min-height:245px;position:relative}
+.print-hero-copy{position:relative;z-index:1;flex:1;min-width:0;padding:30px 0 20px}
+.print-hero-kicker{font-size:10px;font-weight:700;letter-spacing:.1em;color:#F5D5C7}
+.print-hero h1{font-family:'Onest','Noto Sans Georgian',sans-serif!important;font-weight:800!important;font-size:clamp(58px,15vw,110px)!important;letter-spacing:-.095em!important;line-height:.95!important;margin:15px 0 18px!important;color:var(--paper)}
+.hero-period{color:#E76A56}
+.print-hero p{color:var(--paper);font-size:13px;max-width:260px;line-height:1.45}
+.hero-illustration{position:absolute;right:-24px;bottom:4px;width:44%;max-width:240px;color:#F4F0E7;transform:rotate(-12deg);opacity:.95}
+.hero-illustration svg{display:block;width:100%;height:auto}
+.hero-spark{position:absolute;top:-14px;right:5px;font-size:44px;color:#E76A56}
+.print-hero-bottom{border-top:1px solid #ffffff66;padding:14px 0}
+.search-block input{background:#EAE4D9;border-radius:0;border:1px solid var(--line)}
+.search-block input:focus{border-color:var(--espresso);box-shadow:0 0 0 2px #243e7225}
+.section-heading{border-bottom:2px solid var(--roasted);padding-bottom:12px}
+.section-heading h2{font-family:'Onest','Noto Sans Georgian',sans-serif!important;font-size:clamp(29px,7vw,45px)!important;font-weight:800!important;letter-spacing:-.06em!important;text-transform:uppercase}
+.section-heading .result-count{color:var(--roasted);font-family:'Onest',sans-serif;font-weight:700}
+.dish-card{border-bottom:1px solid var(--line)}
+.dish-title{color:var(--espresso);font-weight:700}
+.dish-thumb{border-radius:2px}
+.dish-quick-add,.add-cart-button,.primary-action{border-radius:3px!important}
+.dish-quick-add{background:var(--espresso)!important;color:var(--paper)!important}
+.price{color:var(--espresso);font-weight:800}
+.status-tag{background:#F0DDD7;color:#A23D32}
+.details-dialog,.sidebar,.cart-drawer,.gate-screen{background:var(--paper)}
+.details-body h2,.cart-head h2{font-family:'Onest','Noto Sans Georgian',sans-serif!important;font-weight:800!important;letter-spacing:-.06em!important}
+.details-close{background:var(--paper)!important}
+.gate-decoration{background:var(--espresso)}
+.gate-disc,.gate-disc-inner{border-color:var(--paper);color:var(--paper)}
+.gate-content h1{font-family:'Onest',sans-serif;font-weight:800;letter-spacing:-.075em}
+.gate-content h1 em{font-family:'Onest',sans-serif;font-style:normal;color:var(--roasted)}
+.site-footer{border-top:2px solid var(--espresso)}
+@media(min-width:768px){.print-hero{margin:24px 0 42px;padding:26px 34px 0;min-height:440px}.print-hero-grid{min-height:340px}.print-hero h1{font-size:clamp(100px,12vw,180px)!important}.hero-illustration{right:7%;bottom:20px;width:30%;max-width:320px}.print-hero p{font-size:16px;max-width:390px}}
+@media(max-width:360px){.print-hero{margin-left:-16px;margin-right:-16px}.print-hero h1{font-size:53px!important}.hero-illustration{width:40%;right:-18px}}
+html[lang="ka"] .print-hero h1{font-family:'Noto Sans Georgian',sans-serif!important;font-size:clamp(42px,10vw,75px)!important;letter-spacing:-.05em!important}
