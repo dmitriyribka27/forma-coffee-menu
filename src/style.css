@@ -81,3 +81,35 @@ html[lang="ka"] .cart-head h2,html[lang="ka"] .cart-empty h3{font-family:'Noto S
 .cart-photo{border:0;padding:0}
 @media(min-width:768px){.dish-card-main{min-height:125px}.dish-card:nth-last-child(2){border-bottom:0}}
 @media(max-width:360px){.dish-card-main{gap:10px;padding-right:45px}.dish-quick-add{width:40px;height:40px;right:0}}
+
+
+/* v0.3.2 — compact mobile product dashboard; avoid upscaling 440px source images */
+@media(max-width:767px){
+ .details-dialog{height:100dvh;max-height:100dvh}
+ .details-top{min-height:52px;padding:0 16px}
+ .details-scroll{padding-bottom:max(12px,env(safe-area-inset-bottom));}
+ .details-hero{height:clamp(110px,19dvh,165px);min-height:0;max-height:165px;background:var(--oat);overflow:hidden}
+ .details-hero img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:var(--oat)}
+ .details-body{padding:15px 18px 24px}
+ .details-body h2{font-size:clamp(30px,8vw,42px);line-height:1.04;margin:7px 0 9px}
+ .details-description{font-size:13px;line-height:1.4}
+ .details-rule{margin:15px 0}
+ .detail-section{margin-bottom:14px}
+ .detail-section h3{font-size:10px;margin-bottom:6px}
+ .detail-section>p{font-size:13px;line-height:1.45}
+ .allergen-list{gap:5px}
+ .allergen{font-size:11px;padding:5px 7px}
+ .option-list{gap:6px}
+ .price-option{min-height:43px;padding:7px 11px;font-size:13px}
+ .details-total{margin-top:14px;padding-top:12px;font-size:13px}
+ .details-total strong{font-size:22px}
+ .add-cart-button{min-height:48px;margin-top:12px;font-size:14px}
+ .details-cover{animation:none}
+ .cart-drawer,.sidebar{animation:none}
+}
+@media(max-width:767px) and (max-height:740px){
+ .details-hero{height:110px}
+ .details-body{padding-top:10px}
+ .details-rule{margin:10px 0}
+ .detail-section{margin-bottom:10px}
+}
