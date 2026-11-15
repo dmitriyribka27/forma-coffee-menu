@@ -161,3 +161,11 @@ html[lang="ka"] .cart-head h2,html[lang="ka"] .cart-empty h3{font-family:'Noto S
  .details-hero{width:94px;height:94px}
  .details-body h2{font-size:23px}
 }
+
+
+/* v0.3.4 — footer spacing: keep brand, top action and credits separate */
+.site-footer{display:flex;flex-direction:column;align-items:stretch;gap:0;padding-top:36px}
+.site-footer .footer-brand{margin:0 0 28px;line-height:1.05}
+.site-footer .footer-brand span{display:block;margin-top:5px;line-height:1.3}
+.site-footer .back-to-top{flex:none;margin:0 0 30px}
+.site-footer .footer-bottom{margin:0;padding-top:17px}
