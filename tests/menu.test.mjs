@@ -39,3 +39,9 @@ test('validator catches conflicting price models',()=>{
  copy.dishes[0].price_options=structuredClone(menu.dishes[1].price_options);
  assert.ok(validateMenu(copy).some(e=>e.includes('price model')));
 });
+test('search matches dish names only, not descriptions or ingredients',()=>{
+ assert.equal(searchDishes(menu,'ru','эспрессо').length,2); // Эспрессо and Эспрессо-тоник
+ assert.equal(searchDishes(menu,'ru','молоко').length,0);
+ assert.equal(searchDishes(menu,'en','chocolate').length,0);
+ assert.equal(searchDishes(menu,'en','espresso').length,2);
+});
