@@ -169,3 +169,30 @@ html[lang="ka"] .cart-head h2,html[lang="ka"] .cart-empty h3{font-family:'Noto S
 .site-footer .footer-brand span{display:block;margin-top:5px;line-height:1.3}
 .site-footer .back-to-top{flex:none;margin:0 0 30px}
 .site-footer .footer-bottom{margin:0;padding-top:17px}
+
+
+/* v0.4.0 — venue information and location */
+.venue-section{margin:52px 0 10px;padding:30px 0 34px;border-top:1px solid var(--line);color:var(--espresso)}
+.venue-heading{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.14em;color:var(--roasted);font-weight:700}
+.venue-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(35px,9vw,56px);font-weight:500;line-height:1.1;margin:18px 0 8px}
+.venue-lead{font-size:14px;color:var(--stone);line-height:1.6;margin-bottom:26px}
+.venue-info{border-top:1px solid var(--line)}
+.venue-row{display:flex;align-items:center;gap:13px;padding:16px 0;border-bottom:1px solid var(--line)}
+.venue-icon{display:flex;align-items:center;justify-content:center;flex:none;width:43px;height:43px;border-radius:11px;background:var(--oat);font-size:23px;color:var(--roasted)}
+.venue-row-body{display:flex;flex:1;flex-direction:column;min-width:0;gap:4px}
+.venue-label{font-size:12px;color:var(--stone)}
+.venue-row-body strong{font-size:14px;font-weight:600;overflow-wrap:anywhere}
+.venue-row-body small{font-size:12px;color:var(--stone)}
+.venue-copy{display:flex;align-items:center;justify-content:center;flex:none;width:40px;height:44px;background:transparent;color:var(--roasted);font-size:23px;border-radius:9px}
+.venue-copy:focus-visible,.venue-route:focus-visible{outline:2px solid var(--roasted);outline-offset:2px}
+.venue-location{margin-top:28px}
+.venue-map-preview{height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,var(--oat),var(--paper));text-align:center}
+.venue-map-preview>span{font-size:36px;color:var(--roasted)}
+.venue-map-preview strong{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:500}
+.venue-map-preview small{color:var(--stone);font-size:11px}
+.venue-route{display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 17px;margin-top:12px;background:var(--espresso);color:var(--paper);text-decoration:none;border-radius:12px;font-size:14px;font-weight:600}
+.venue-route span{font-size:23px}
+.venue-toast{min-height:20px;margin-top:7px;text-align:center;color:var(--roasted);font-size:12px;opacity:0;transition:opacity .2s}
+.venue-toast.visible{opacity:1}
+html[lang="ka"] .venue-section h2,html[lang="ka"] .venue-map-preview strong{font-family:'Noto Sans Georgian',sans-serif;font-size:30px}
+@media(min-width:768px){.venue-section{max-width:650px;margin-left:auto;margin-right:auto}.venue-map-preview{height:190px}}
