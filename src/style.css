@@ -196,3 +196,21 @@ html[lang="ka"] .cart-head h2,html[lang="ka"] .cart-empty h3{font-family:'Noto S
 .venue-toast.visible{opacity:1}
 html[lang="ka"] .venue-section h2,html[lang="ka"] .venue-map-preview strong{font-family:'Noto Sans Georgian',sans-serif;font-size:30px}
 @media(min-width:768px){.venue-section{max-width:650px;margin-left:auto;margin-right:auto}.venue-map-preview{height:190px}}
+
+
+/* v0.4.1 — consistent line icons and expandable weekly schedule */
+.venue-icon svg,.venue-copy svg{display:block;width:22px;height:22px;flex:none}
+.venue-copy{font-size:initial}
+.venue-hours-trigger{width:100%;text-align:left;background:transparent;color:var(--espresso);cursor:pointer}
+.venue-hours-trigger .venue-row-body{display:flex}
+.venue-chevron{font-size:24px;color:var(--roasted);transition:transform .23s ease;flex:none;margin-right:10px}
+.venue-hours-trigger[aria-expanded="true"] .venue-chevron{transform:rotate(180deg)}
+.venue-hours-panel{padding:0 0 14px 56px;border-bottom:1px solid var(--line)}
+.venue-hours-panel[hidden]{display:none}
+.venue-days{padding:12px 14px;border:1px solid var(--line);border-radius:13px;background:var(--oat);animation:venueDrop .22s ease-out}
+.venue-day{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 0;font-size:13px;border-bottom:1px solid rgba(139,99,72,.18)}
+.venue-day:last-child{border-bottom:0}
+.venue-day strong{font-size:13px;font-weight:600;white-space:nowrap}
+@keyframes venueDrop{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.venue-days{animation:none}.venue-chevron{transition:none}}
+@media(max-width:360px){.venue-hours-panel{padding-left:0}.venue-day{font-size:12px}.venue-day strong{font-size:12px}}
