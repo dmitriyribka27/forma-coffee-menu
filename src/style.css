@@ -248,3 +248,9 @@ html[lang="ka"] .venue-section h2,html[lang="ka"] .venue-map-preview strong{font
 .sidebar-legal-text{font-size:12px;line-height:1.65;color:var(--stone);overflow-wrap:anywhere}
 .sidebar-legal-text p{margin:0 0 4px;font-weight:400}
 .sidebar-legal-text p:last-child{margin-bottom:0}
+
+/* Touch interaction: do not retain keyboard focus rings after taps. */
+html.touch-input button:focus-visible,
+html.touch-input a:focus-visible,
+html.touch-input [role="button"]:focus-visible {outline:none!important;box-shadow:none!important}
+html.touch-input input:focus-visible {outline:none}
