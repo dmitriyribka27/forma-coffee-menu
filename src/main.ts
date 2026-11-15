@@ -1,4 +1,16 @@
 import './style.css';
+// Keep focus indicators for keyboard navigation, not for touch interactions.
+document.addEventListener('pointerdown', event => {
+  if (event.pointerType === 'touch' || event.pointerType === 'pen' || event.pointerType === 'mouse') document.documentElement.classList.add('touch-input');
+}, {passive:true, capture:true});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Tab' || event.key.startsWith('Arrow')) document.documentElement.classList.remove('touch-input');
+}, {capture:true});
+// Older iOS Safari can still emit gesture events despite the viewport directive.
+document.addEventListener('gesturestart', event => event.preventDefault(), {passive:false});
+document.addEventListener('gesturechange', event => event.preventDefault(), {passive:false});
+
+
 import { menu, validateMenu, categoryDishes, visibleDishes, searchDishes, minPrice, money } from './data';
 import { languages, t } from './i18n';
 import type { Dish, Language, Category } from './types';
