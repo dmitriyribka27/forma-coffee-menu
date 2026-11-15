@@ -214,3 +214,13 @@ html[lang="ka"] .venue-section h2,html[lang="ka"] .venue-map-preview strong{font
 @keyframes venueDrop{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.venue-days{animation:none}.venue-chevron{transition:none}}
 @media(max-width:360px){.venue-hours-panel{padding-left:0}.venue-day{font-size:12px}.venue-day strong{font-size:12px}}
+
+
+/* v0.4.2 — floating schedule, not in document flow */
+.venue-hours-wrap{position:relative;isolation:isolate}
+.venue-hours-wrap:has(.venue-hours-trigger[aria-expanded="true"]){z-index:12}
+.venue-hours-panel{position:absolute;top:calc(100% - 1px);right:0;left:55px;z-index:20;padding:0;border:0;background:transparent;filter:drop-shadow(0 12px 20px rgba(50,43,38,.15))}
+.venue-days{max-height:min(400px,55dvh);overflow-y:auto;overscroll-behavior:contain;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:8px 14px}
+.venue-map-link{display:flex;text-decoration:none}
+.venue-map-link svg{display:block}
+@media(max-width:360px){.venue-hours-panel{left:0}.venue-row{gap:9px}.venue-copy{width:35px}}
