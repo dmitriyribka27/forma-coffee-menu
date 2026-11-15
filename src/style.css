@@ -311,3 +311,14 @@ html[lang="ka"] .print-hero h1{font-family:'Noto Sans Georgian',sans-serif!impor
 @media(min-width:768px){.print-hero{padding:28px 36px!important}.print-hero-grid{min-height:270px!important}.hero-illustration{right:8%!important;bottom:-20px!important;width:28%!important;max-width:280px!important}.print-hero h1{font-size:clamp(100px,12vw,170px)!important}}
 @media(max-width:360px){.print-hero h1{font-size:54px!important}.hero-illustration{width:44%!important;right:-18px!important}}
 html[lang="ka"] .print-hero h1{font-size:clamp(42px,10vw,75px)!important}
+
+/* FORMA v1.2: Georgian letterform brand hero */
+.print-hero-monogram{margin:16px -20px 26px!important;padding:20px!important;min-height:0!important;overflow:hidden}
+.forma-mark{min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0}
+.forma-monogram{width:min(48vw,192px);height:auto;margin-bottom:0;line-height:0}
+.forma-monogram svg{display:block;width:100%;height:auto}
+.forma-wordmark{font-family:'Onest',sans-serif;font-size:clamp(65px,17vw,125px);font-weight:800;line-height:.95;letter-spacing:-.09em;color:#F4F0E7;margin-top:-5px;padding-right:.08em}
+.forma-wordmark-period{color:#D65B49}
+.forma-wordmark-sub{font-family:'Onest',sans-serif;font-size:11px;font-weight:700;letter-spacing:.5em;margin:13px 0 2px .5em;color:#F4F0E7}
+@media(min-width:768px){.print-hero-monogram{margin:24px 0 42px!important;padding:34px!important}.forma-mark{min-height:440px}.forma-monogram{width:220px}.forma-wordmark{font-size:145px}}
+@media(max-width:360px){.print-hero-monogram{margin-left:-16px!important;margin-right:-16px!important}.forma-mark{min-height:280px}.forma-wordmark{font-size:59px}}
