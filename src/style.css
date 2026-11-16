@@ -396,3 +396,48 @@ body{background-color:#F4EFE5;background-image:url('/forma-coffee-menu/forma-pap
 .editorial-dialog .editorial-botanical{position:absolute!important;z-index:1;right:-9px!important;bottom:-12px!important;width:59%!important;height:205px!important;background-position:right bottom!important;background-size:contain!important;pointer-events:none}
 @media(max-width:390px){.editorial-dialog .editorial-meta{min-height:185px!important}.editorial-dialog .editorial-botanical{width:58%!important;height:180px!important;right:-8px!important;bottom:-10px!important}}
 @media(min-width:768px){.editorial-dialog .editorial-meta{min-height:255px!important}.editorial-dialog .editorial-botanical{width:56%!important;height:260px!important;right:-12px!important;bottom:-15px!important}}
+
+/* FORMA card layout v2.1 — compact variable-height details, reserved botanical zone */
+.editorial-dialog .editorial-meta{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(100px,36%)!important;
+  gap:8px!important;
+  align-items:center!important;
+  min-height:0!important;
+  padding:18px 0!important;
+  overflow:hidden;
+}
+.editorial-dialog .editorial-meta-copy{
+  position:relative;z-index:2;max-width:none!important;
+  min-width:0;align-self:center;
+}
+.editorial-dialog .editorial-meta-row{
+  grid-template-columns:minmax(75px,36%) minmax(0,1fr);
+  gap:8px;
+  margin-bottom:12px;
+}
+.editorial-dialog .editorial-meta-row:last-child{margin-bottom:0}
+.editorial-dialog .editorial-meta-row p{overflow-wrap:break-word}
+.editorial-dialog .editorial-botanical{
+  position:relative!important;
+  right:auto!important;bottom:auto!important;
+  width:100%!important;height:clamp(110px,24vw,155px)!important;
+  align-self:end!important;
+  background-size:contain!important;
+  background-position:right bottom!important;
+  pointer-events:none;
+}
+.editorial-dialog .editorial-meta.no-options{padding:12px 0!important}
+.editorial-dialog .editorial-meta.no-options .editorial-botanical{height:clamp(95px,22vw,135px)!important}
+.editorial-dialog .editorial-meta.has-allergens .editorial-botanical{height:clamp(120px,27vw,170px)!important}
+@media(max-width:390px){
+  .editorial-dialog .editorial-meta{grid-template-columns:minmax(0,1fr) minmax(90px,32%)!important;gap:5px!important}
+  .editorial-dialog .editorial-meta-row{grid-template-columns:minmax(70px,38%) minmax(0,1fr);gap:6px}
+  .editorial-dialog .editorial-botanical{height:120px!important}
+  .editorial-dialog .editorial-meta.no-options .editorial-botanical{height:105px!important}
+}
+@media(min-width:768px){
+  .editorial-dialog .editorial-meta{grid-template-columns:minmax(0,1fr) 36%!important;padding:20px 0!important}
+  .editorial-dialog .editorial-botanical{height:180px!important}
+  .editorial-dialog .editorial-meta.no-options .editorial-botanical{height:145px!important}
+}
