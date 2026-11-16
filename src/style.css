@@ -337,3 +337,9 @@ body{background-color:#F4EFE5;background-image:url('/forma-coffee-menu/forma-pap
 .forma-wordmark-sub{letter-spacing:.55em!important;margin-top:15px!important}
 @media(min-width:768px){.forma-mark{min-height:470px!important}.forma-monogram{width:310px!important}.forma-wordmark{font-size:170px!important}}
 @media(max-width:360px){.forma-monogram{width:58vw!important}.forma-wordmark{font-size:70px!important}}
+
+/* FORMA image hero: uploaded approved artwork, no duplicate HTML typography */
+.print-hero.print-hero-image{padding:0!important;min-height:0!important;margin:16px -20px 26px!important;background:none!important;background-image:none!important;overflow:hidden!important}
+.forma-hero-art{display:block;width:100%;height:auto;max-width:none;object-fit:contain;border:0}
+@media(min-width:768px){.print-hero.print-hero-image{margin:24px 0 42px!important}}
+@media(max-width:360px){.print-hero.print-hero-image{margin-left:-16px!important;margin-right:-16px!important}}
