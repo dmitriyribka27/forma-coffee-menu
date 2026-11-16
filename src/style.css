@@ -383,3 +383,9 @@ body{background-color:#F4EFE5;background-image:url('/forma-coffee-menu/forma-pap
 .editorial-dialog .add-cart-button span{font-size:24px}
 @media(max-width:390px){.details-cover{padding:8px}.editorial-dialog .details-scroll{padding:17px 15px 18px!important}.editorial-dialog .details-intro-row{gap:12px}.editorial-dialog .details-close{top:9px;right:9px;width:35px;height:35px}.editorial-dialog .details-description{font-size:15px!important}.editorial-dialog .eyebrow{font-size:9px}.editorial-dialog .details-body h2{font-size:29px!important}.editorial-meta{grid-template-columns:minmax(0,1fr) 25%}.editorial-meta-row{grid-template-columns:75px minmax(0,1fr)}.editorial-dialog .price-option{padding:7px!important}.editorial-dialog .price-option strong{font-size:12px}}
 @media(min-width:768px){.editorial-dialog .details-scroll{padding:30px 34px 32px!important}.editorial-dialog .details-intro-row{gap:30px}.editorial-dialog .details-hero{max-width:220px}.editorial-dialog .details-description{font-size:23px!important}.editorial-botanical{height:155px}}
+
+/* FORMA: larger editorial coffee engraving */
+.editorial-dialog .editorial-meta{grid-template-columns:minmax(0,1fr) 46%;min-height:185px;gap:4px}
+.editorial-dialog .editorial-botanical{height:180px;width:100%;background-size:contain;background-position:center right}
+@media(max-width:390px){.editorial-dialog .editorial-meta{grid-template-columns:minmax(0,1fr) 45%;min-height:165px}.editorial-dialog .editorial-botanical{height:160px}}
+@media(min-width:768px){.editorial-dialog .editorial-meta{grid-template-columns:minmax(0,1fr) 48%;min-height:220px}.editorial-dialog .editorial-botanical{height:210px}}
