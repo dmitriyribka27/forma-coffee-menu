@@ -454,3 +454,8 @@ body{background-color:#F4EFE5;background-image:url('/forma-coffee-menu/forma-pap
 @media(prefers-reduced-motion:reduce){
  .details-cover,.details-cover .details-dialog.editorial-dialog{animation:none!important}
 }
+
+/* v0.4.9 — solid terracotta return-to-menu action in empty order */
+.cart-empty button[data-close-cart]{display:inline-flex;align-items:center;justify-content:center;min-height:50px;margin-top:25px;padding:13px 27px;border:0;border-radius:13px;background:#bf5145;color:#fff;font:600 15px 'Onest',sans-serif;line-height:1.25;box-shadow:0 4px 12px rgba(120,48,38,.12);transition:background-color .2s ease,box-shadow .2s ease}
+.cart-empty button[data-close-cart]:active{background:#a94238;box-shadow:none}
+.cart-empty button[data-close-cart]:focus-visible{outline:2px solid #243f76;outline-offset:3px}
