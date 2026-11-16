@@ -441,3 +441,16 @@ body{background-color:#F4EFE5;background-image:url('/forma-coffee-menu/forma-pap
   .editorial-dialog .editorial-botanical{height:180px!important}
   .editorial-dialog .editorial-meta.no-options .editorial-botanical{height:145px!important}
 }
+
+/* v0.4.8 — stable modal fade/scale; no vertical translation or layout animation */
+@keyframes formaModalAppear{from{opacity:0;transform:scale(.975)}to{opacity:1;transform:scale(1)}}
+@keyframes formaModalDisappear{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(.985)}}
+@keyframes formaCoverAppear{from{opacity:0}to{opacity:1}}
+@keyframes formaCoverDisappear{from{opacity:1}to{opacity:0}}
+.details-cover:not(.is-closing){animation:formaCoverAppear .24s ease-out both!important}
+.details-cover:not(.is-closing) .details-dialog.editorial-dialog{animation:formaModalAppear .27s cubic-bezier(.2,.75,.25,1) both!important;transform-origin:center center}
+.details-cover.is-closing{animation:formaCoverDisappear .22s ease-in both!important;pointer-events:none}
+.details-cover.is-closing .details-dialog.editorial-dialog{animation:formaModalDisappear .22s ease-in both!important}
+@media(prefers-reduced-motion:reduce){
+ .details-cover,.details-cover .details-dialog.editorial-dialog{animation:none!important}
+}
