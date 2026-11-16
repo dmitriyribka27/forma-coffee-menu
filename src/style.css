@@ -389,3 +389,10 @@ body{background-color:#F4EFE5;background-image:url('/forma-coffee-menu/forma-pap
 .editorial-dialog .editorial-botanical{height:180px;width:100%;background-size:contain;background-position:center right}
 @media(max-width:390px){.editorial-dialog .editorial-meta{grid-template-columns:minmax(0,1fr) 45%;min-height:165px}.editorial-dialog .editorial-botanical{height:160px}}
 @media(min-width:768px){.editorial-dialog .editorial-meta{grid-template-columns:minmax(0,1fr) 48%;min-height:220px}.editorial-dialog .editorial-botanical{height:210px}}
+
+/* FORMA modal: botanical engraving grows from lower-right edge of information panel */
+.editorial-dialog .editorial-meta{position:relative;isolation:isolate;grid-template-columns:minmax(0,1fr)!important;min-height:210px!important;padding-bottom:40px!important;overflow:hidden}
+.editorial-dialog .editorial-meta> :first-child{position:relative;z-index:2;max-width:68%}
+.editorial-dialog .editorial-botanical{position:absolute!important;z-index:1;right:-9px!important;bottom:-12px!important;width:59%!important;height:205px!important;background-position:right bottom!important;background-size:contain!important;pointer-events:none}
+@media(max-width:390px){.editorial-dialog .editorial-meta{min-height:185px!important}.editorial-dialog .editorial-botanical{width:58%!important;height:180px!important;right:-8px!important;bottom:-10px!important}}
+@media(min-width:768px){.editorial-dialog .editorial-meta{min-height:255px!important}.editorial-dialog .editorial-botanical{width:56%!important;height:260px!important;right:-12px!important;bottom:-15px!important}}
